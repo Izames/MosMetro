@@ -1,0 +1,31 @@
+﻿<Page x:Class="MosMetro.UserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MosMetro"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserPage">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="Tickets" Grid.Row="0" Grid.Column="0"/>
+        <TextBlock Text="Выберите Тип Билета" Grid.Column="0" Grid.Row="1"/>
+        <TextBlock Text="Выберите Метро" Grid.Column="0" Grid.Row="2"/>
+        <DataGrid x:Name="Metroes" Grid.Row="0" Grid.Column="1"/>
+        <ComboBox x:Name="AtTicket" Grid.Column="1" Grid.Row="1"/>
+        <ComboBox x:Name="AtMetro" Grid.Column="1" Grid.Row="2"/>
+        <Button x:Name="Back" Grid.Column="0" Grid.Row="3" Content="Вернуться к регистрации" Click="Back_Click"/>
+        <Button x:Name="Send" Grid.Column="1" Grid.Row="3" Content="Отправить запрос" Click="Send_Click"/>
+    </Grid>
+</Page>

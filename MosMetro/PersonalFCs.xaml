@@ -1,0 +1,38 @@
+﻿<Page x:Class="MosMetro.PersonalFCs"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MosMetro"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PersonalFCs">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="Back" Content="в меню администратора" Grid.Column="0" Grid.Row="3" Click="Back_Click" />
+        <Button x:Name="AddFCs" Content="Добавить" Grid.Column="1" Grid.Row="3" Click="AddFCs_Click"  />
+        <Button x:Name="RedactTable" Content="Включить редактирование" Grid.Column="2" Grid.Row="3" Click="RedactTable_Click"  />
+        <Button x:Name="Delete" Content="удалить элемент" Grid.Column="3" Grid.Row="3" Click="Delete_Click" />
+        <Button x:Name="Import" Content="Импорт" Grid.Column="4" Grid.Row="3" Click="Import_Click" />
+
+        <TextBox x:Name="Name" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4"/>
+        <TextBox x:Name="SecondName" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4"/>
+        <TextBlock Text="Имя" Grid.Row="1" Grid.Column="0"/>
+        <TextBlock Text="Фамилия" Grid.Row="2" Grid.Column="0"/>
+        <DataGrid x:Name="PersonalFCsGrid" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" SelectionChanged="PersonalFCsGrid_SelectionChanged"  />
+    </Grid>
+</Page>
